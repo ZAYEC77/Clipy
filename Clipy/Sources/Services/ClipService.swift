@@ -51,6 +51,13 @@ final class ClipService {
             .disposed(by: disposeBag)
     }
 
+    func getClips() -> Results<CPYClip> {
+        let realm = try! Realm()
+        let ascending = !AppEnvironment.current.defaults.bool(forKey: Constants.UserDefaults.reorderClipsAfterPasting)
+        let clipResults = realm.objects(CPYClip.self).sorted(byKeyPath: #keyPath(CPYClip.updateTime), ascending: ascending)
+        return clipResults
+    }
+
     func clearAll() {
         let realm = try! Realm()
         let clips = realm.objects(CPYClip.self)

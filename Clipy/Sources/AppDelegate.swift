@@ -63,6 +63,11 @@ class AppDelegate: NSObject {
         CPYSnippetsEditorWindowController.sharedController.showWindow(self)
     }
 
+    @objc func showSearchWindow() {
+        NSApp.activate(ignoringOtherApps: true)
+        CPYSearchWindowController.sharedController.showWindow(self)
+    }
+
     @objc func terminate() {
         terminateApplication()
     }

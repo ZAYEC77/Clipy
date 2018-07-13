@@ -51,6 +51,7 @@ struct Constants {
         static let menuItemsTitleStartWithZero = "kCPYPrefMenuItemsTitleStartWithZeroKey"
         static let reorderClipsAfterPasting = "kCPYPrefReorderClipsAfterPasting"
         static let addClearHistoryMenuItem = "kCPYPrefAddClearHistoryMenuItemKey"
+        static let addSearchMenuItem = "kCPYPrefSearchMenuItemKey"
         static let showAlertBeforeClearHistory = "kCPYPrefShowAlertBeforeClearHistoryKey"
         static let menuItemsAreMarkedWithNumbers = "menuItemsAreMarkedWithNumbers"
         static let showToolTipOnMenuItem = "showToolTipOnMenuItem"

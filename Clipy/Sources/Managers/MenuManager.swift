@@ -177,6 +177,9 @@ private extension MenuManager {
         if AppEnvironment.current.defaults.bool(forKey: Constants.UserDefaults.addClearHistoryMenuItem) {
             clipMenu?.addItem(NSMenuItem(title: L10n.clearHistory, action: #selector(AppDelegate.clearAllHistory)))
         }
+     //   if AppEnvironment.current.defaults.bool(forKey: Constants.UserDefaults.addSearchMenuItem) {
+        clipMenu?.addItem(NSMenuItem(title: "Search", action: #selector(AppDelegate.showSearchWindow)))
+       // }
 
         clipMenu?.addItem(NSMenuItem(title: L10n.editSnippets, action: #selector(AppDelegate.showSnippetEditorWindow)))
         clipMenu?.addItem(NSMenuItem(title: L10n.preferences, action: #selector(AppDelegate.showPreferenceWindow)))
